@@ -3,11 +3,11 @@ This repository provides a Python implementation for reading, manipulating, and 
 
 # dc6
 
-##  Functions
+# 🎈 Functions
 
-## load
+###   load
 
-Reads a DC6 file from the specified file pointer and returns a DC6 instance.
+	Reads a DC6 file from the specified file pointer and returns a DC6 instance.
 
 This function works by reading the data from the file pointer and then passing it to the DC6.from_bytes() function.
 
@@ -15,9 +15,9 @@ _param filepointer_ The file pointer to read the DC6 file from
 _return_ The DC6 instance representing the read DC6 file
 
 
-## dump
+###   dump
 
-Writes a DC6 file to the specified file pointer.
+	Writes a DC6 file to the specified file pointer.
 
 This function works by first converting the DC6 instance to a byte string using the to_bytes() method, and then writing the byte string to the file pointer.
 
@@ -25,9 +25,9 @@ _param dc6_ The DC6 instance to write
 _param filepointer_ The file pointer to write the DC6 file to
 
 
-## read_dc6_file
+###   read_dc6_file
 
-Reads a DC6 file from the specified file path and returns a DC6 instance.
+	Reads a DC6 file from the specified file path and returns a DC6 instance.
 
 This function works by_
 
@@ -45,7 +45,7 @@ _return_ An instance of the DC6 class
 _rtype_ DC6
 
 
-##  🏛  Classes
+#  🏛  Classes
 
 ## ScanlineState
 
