@@ -1,47 +1,48 @@
 # dc6-python
 This repository provides a Python implementation for reading, manipulating, and writing DC6 file format data, commonly used in Diablo 2 and its modding community. The DC6 format consists of a series of bitmap images used for animated sprites and UI elements in the game.
 
+
 # dc6
 
 # 🎈 Functions
 
 ###   load
 
-	Reads a DC6 file from the specified file pointer and returns a DC6 instance.
-
-This function works by reading the data from the file pointer and then passing it to the DC6.from_bytes() function.
-
-_param filepointer_ The file pointer to read the DC6 file from
+Reads a DC6 file from the specified file pointer and returns a DC6 instance.	
+	
+This function works by reading the data from the file pointer and then passing it to the DC6.from_bytes() function.	
+	
+_param filepointer_ The file pointer to read the DC6 file from	
 _return_ The DC6 instance representing the read DC6 file
 
 
 ###   dump
 
-	Writes a DC6 file to the specified file pointer.
-
-This function works by first converting the DC6 instance to a byte string using the to_bytes() method, and then writing the byte string to the file pointer.
-
-_param dc6_ The DC6 instance to write
+Writes a DC6 file to the specified file pointer.	
+	
+This function works by first converting the DC6 instance to a byte string using the to_bytes() method, and then writing the byte string to the file pointer.	
+	
+_param dc6_ The DC6 instance to write	
 _param filepointer_ The file pointer to write the DC6 file to
 
 
 ###   read_dc6_file
 
-	Reads a DC6 file from the specified file path and returns a DC6 instance.
-
-This function works by_
-
-1. Opening the file at the specified path in binary read mode ('rb') using a with statement. This ensures that the file is properly closed after it is read.
-
-2. Reading the contents of the file into a byte string using the read() method.
-
-3. Creating a new DC6 instance from the byte string using the from_bytes() class method.
-
-4. Returning the new DC6 instance.
-
-_param file_path_ The path to the DC6 file to read
-_type file_path_ str
-_return_ An instance of the DC6 class
+Reads a DC6 file from the specified file path and returns a DC6 instance.	
+	
+This function works by_	
+	
+1. Opening the file at the specified path in binary read mode ('rb') using a with statement. This ensures that the file is properly closed after it is read.	
+	
+2. Reading the contents of the file into a byte string using the read() method.	
+	
+3. Creating a new DC6 instance from the byte string using the from_bytes() class method.	
+	
+4. Returning the new DC6 instance.	
+	
+_param file_path_ The path to the DC6 file to read	
+_type file_path_ str	
+_return_ An instance of the DC6 class	
 _rtype_ DC6
 
 
