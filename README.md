@@ -1,9 +1,10 @@
 # dc6-python
 This repository provides a Python implementation for reading, manipulating, and writing DC6 file format data, commonly used in Diablo 2 and its modding community. The DC6 format consists of a series of bitmap images used for animated sprites and UI elements in the game.
 
+
 # dc6
 
-## Functions
+##  Functions
 
 ## load
 
@@ -45,7 +46,7 @@ _return_ An instance of the DC6 class
 _rtype_ DC6
 
 
-## Classes
+##  🏛  Classes
 
 ## ScanlineState
 
