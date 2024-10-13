@@ -7,6 +7,8 @@ This repository provides a Python implementation for reading, manipulating, and 
 
 ###   dc6.load
 
+	- `filepointer`
+
 
 
 
@@ -20,6 +22,10 @@ This repository provides a Python implementation for reading, manipulating, and 
 
 ###   dc6.dump
 
+	- `dc6`
+
+	- `filepointer`
+
 
 
 
@@ -32,6 +38,8 @@ This repository provides a Python implementation for reading, manipulating, and 
 
 
 ###   dc6.read_dc6_file
+
+	- `file_path`
 
 
 
