@@ -1,7 +1,6 @@
 # dc6-python
 This repository provides a Python implementation for reading, manipulating, and writing DC6 file format data, commonly used in Diablo 2 and its modding community. The DC6 format consists of a series of bitmap images used for animated sprites and UI elements in the game.
 
-
 # dc6
 
 ##  Functions
@@ -60,10 +59,11 @@ _rtype_ DC6
 
 ### __init__
 
+	
 
 ### decode_frame
 
-Decodes the frame data from the DC6 format into an index data array.
+	Decodes the frame data from the DC6 format into an index data array.
 
 The DC6 format stores frame data in a compressed format, which is
 decoded into an index data array by this method.
@@ -83,7 +83,7 @@ _return_ None
 
 ### get_scanline_type
 
-Determine the type of scanline given the byte value.
+	Determine the type of scanline given the byte value.
 
 Given a single byte from the frame data, this function returns the type of scanline
 represented by that byte.
@@ -94,7 +94,7 @@ _rtype_ int
 
 ### as_dict
 
-Returns a dictionary representation of the Frame object.
+	Returns a dictionary representation of the Frame object.
 
 _return_ A dictionary containing the Frame object's properties
 _rtype_ dict
@@ -107,7 +107,7 @@ _rtype_ dict
 
 ### __init__
 
-Initializes a new instance of the Direction class.
+	Initializes a new instance of the Direction class.
 
 The Direction class represents a single direction in a DC6 animation. This
 class contains a list of frames, each represented by a Frame object.
@@ -117,7 +117,7 @@ _type Frames_ List[Frame]
 
 ### as_dict
 
-Returns a dictionary representation of the Direction object.
+	Returns a dictionary representation of the Direction object.
 
 _return_ A dictionary containing the Direction object's properties
 _rtype_ dict
@@ -130,7 +130,7 @@ _rtype_ dict
 
 ### __init__
 
-Initializes a new instance of the DC6 class.
+	Initializes a new instance of the DC6 class.
 
 The DC6 class represents an entire DC6 animation. This class contains information
 about the animation, such as the version, flags, encoding, and termination. It also
@@ -152,14 +152,14 @@ _type palette_ Optional[np.ndarray]
 
 ### frames
 
-Returns a list of all frames in the animation.
+	Returns a list of all frames in the animation.
 
 _return_ A list of all frames in the animation
 _rtype_ List[Frame]
 
 ### frames
 
-Sets the frames for the DC6 animation.
+	Sets the frames for the DC6 animation.
 
 This will replace all existing frames with the provided list.
 
@@ -169,7 +169,7 @@ _return_ None
 
 ### from_bytes
 
-Creates a new DC6 object from the given bytes.
+	Creates a new DC6 object from the given bytes.
 
 This function takes a byte string containing a DC6 animation and creates a new
 DC6 object from it. The new object will have its properties populated from the
@@ -182,7 +182,7 @@ _rtype_ DC6
 
 ### decode_header
 
-Decodes the header of the DC6 animation from the given stream.
+	Decodes the header of the DC6 animation from the given stream.
 
 The header of the DC6 animation is 16 bytes long and is formatted as follows_
 
@@ -197,7 +197,7 @@ _return_ None
 
 ### decode_body
 
-Decodes the body of the DC6 animation from the given stream.
+	Decodes the body of the DC6 animation from the given stream.
 
 This function will populate the Directions list with Direction objects, and
 populate the Frames list of each Direction object with Frame objects. It will
@@ -226,7 +226,7 @@ _return_ None
 
 ### get_default_palette
 
-Returns a default palette of 256 gray colors ranging from 0 (black) to 255 (white).
+	Returns a default palette of 256 gray colors ranging from 0 (black) to 255 (white).
 
 Each color is represented by 4 bytes_ Red, Green, Blue, and Alpha, in that order. The RGB
 values are identical for each color, and the Alpha value is always 255 (fully opaque).
@@ -241,7 +241,7 @@ _rtype_ np.ndarray
 
 ### set_palette
 
-Sets the palette for the DC6 animation.
+	Sets the palette for the DC6 animation.
 
 The palette is a numpy array of 256 colors, each represented by 4 bytes (Red, Green, Blue, and Alpha, in that order).
 The Red, Green, and Blue values are the color components of the pixel, and the Alpha value determines the transparency of the pixel.
@@ -259,14 +259,14 @@ _type palette_ Optional[np.ndarray]
 
 ### as_dict
 
-Returns a dictionary representation of the DC6 object.
+	Returns a dictionary representation of the DC6 object.
 
 _return_ A dictionary containing the DC6 object's properties
 _rtype_ dict
 
 ### dump
 
-Serializes the DC6 object into a bytes representation according to the DC6 format.
+	Serializes the DC6 object into a bytes representation according to the DC6 format.
 
 _return_ A bytes object containing the serialized DC6 data
 _rtype_ bytes
@@ -279,14 +279,14 @@ _rtype_ bytes
 
 ### __init__
 
-Initializes a new MemoryStream instance with the given data.
+	Initializes a new MemoryStream instance with the given data.
 
 _param data_ The data to store in the memory stream
 _type data_ bytes
 
 ### read
 
-Reads the specified number of bytes from the memory stream 
+	Reads the specified number of bytes from the memory stream 
 and returns them as a byte string.
 
 The current position of the memory stream is advanced by 
@@ -317,7 +317,7 @@ _rtype_ bytes
 
 ### __init__
 
-Initializes a new DC6File instance with the given file path.
+	Initializes a new DC6File instance with the given file path.
 
 This function works by_
 
@@ -335,7 +335,7 @@ _type file_path_ str
 
 ### save_frames
 
-Saves all frames in the DC6 animation to separate PNG files in the specified output directory.
+	Saves all frames in the DC6 animation to separate PNG files in the specified output directory.
 
 This function works by iterating over all frames in the animation and saving each frame as a separate PNG file in the specified output directory.
 The filename of each PNG file is of the form "frame_dirX_frameY.png", where X is the direction index and Y is the frame index.
@@ -352,7 +352,7 @@ _type output_dir_ str
 
 ### to_bytes
 
-Converts the DC6File instance to a byte string.
+	Converts the DC6File instance to a byte string.
 
 This function works by serializing the DC6File instance into a byte string using the to_bytes() method of the DC6 class.
 
